@@ -20,7 +20,7 @@
     </properties>
     <groupId>com.project.bi</groupId>
     <artifactId>flair-commons</artifactId>
-    <version>1.4.19-alpha-SNAPSHOT</version>
+    <version>1.4.20-SNAPSHOT</version>
     <description>Project that contains all common classes to project BI</description>
 
     <scm>
