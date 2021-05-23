@@ -24,9 +24,9 @@
     <description>Project that contains all common classes to project BI</description>
 
     <scm>
-        <connection>scm:git:https://@github.com/DX26-io/flair-commons.git</connection>
+        <connection>scm:git:https://rocky-sr@github.com/DX26-io/flair-commons.git</connection>
         <url>https://github.com/DX26-io/flair-commons.git</url>
-        <developerConnection>scm:git:https://@github.com/DX26-io/flair-commons.git</developerConnection>
+        <developerConnection>scm:git:https://rocky-sr@github.com/DX26-io/flair-commons.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 
