@@ -19,28 +19,23 @@
         <bucket.name>dx26-mvn-repo</bucket.name>
     </properties>
     <groupId>com.project.bi</groupId>
-    <artifactId>project-bi-common</artifactId>
-    <version>1.4.18-SNAPSHOT</version>
+    <artifactId>flair-commons</artifactId>
+    <version>1.4.18-alpha-SNAPSHOT</version>
     <description>Project that contains all common classes to project BI</description>
 
-    <scm>
-        <connection>scm:git:https://${GIT_USER}:${GIT_PASSWORD}@github.com/DX26-io/flair-commons.git</connection>
-        <url>https://${GIT_USER}:${GIT_PASSWORD}@github.com/DX26-io/flair-commons.git</url>
-        <developerConnection>scm:git:https://${GIT_USER}:${GIT_PASSWORD}@github.com/DX26-io/flair-commons.git</developerConnection>
-        <tag>v1.3.19</tag>
-    </scm>
+    <!--    <scm>-->
+    <!--        <connection>scm:git:https://@github.com/DX26-io/flair-commons.git</connection>-->
+    <!--        <url>https://github.com/DX26-io/flair-commons.git</url>-->
+    <!--        <developerConnection>scm:git:https://@github.com/DX26-io/flair-commons.git</developerConnection>-->
+    <!--        <tag>v1.3.19</tag>-->
+    <!--    </scm>-->
 
-     <distributionManagement>
+    <distributionManagement>
         <repository>
-            <id>aws-release</id>
-            <name>AWS Release Repository</name>
-            <url>s3://${bucket.name}/release</url>
+            <id>github</id>
+            <name>GitHub Release Packages</name>
+            <url>https://maven.pkg.github.com/DX26-io/flair-commons</url>
         </repository>
-        <snapshotRepository>
-            <id>aws-snapshot</id>
-            <name>AWS Snapshot Repository</name>
-            <url>s3://${bucket.name}/snapshot</url>
-        </snapshotRepository>
     </distributionManagement>
 
     <dependencies>
