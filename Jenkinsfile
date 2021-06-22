@@ -7,8 +7,10 @@ node {
 
     if (env.BRANCH_NAME == 'master') {
         stage('Deploy Artifact') {
+            echo '[INFO] Checking out master'
+            sh 'git checkout -f master'
             echo '[INFO] Deploy Artifacts'
-                sh 'mvn -B release:clean release:prepare release:perform'
+            sh 'mvn -B release:clean release:prepare release:perform'
         }
     } else {
         stage('Test and Package') {
