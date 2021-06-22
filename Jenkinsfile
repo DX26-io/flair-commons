@@ -1,6 +1,7 @@
 node {
 
     stage('Checkout SCM') {
+        cleanWs()
         echo 'Clone SCM'
         checkout scm
     }
