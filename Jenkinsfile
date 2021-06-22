@@ -5,7 +5,7 @@ node {
     }
     stage('Test and Package') {
         echo '[INFO] Test and Package'
-        mvn clean package
+        sh 'mvn clean package'
     }
     stage('Publish results') {
         echo '[INFO] [TODO] Publish tests'
@@ -13,9 +13,9 @@ node {
     stage('Deploy Artifact') {
         echo '[INFO] Deploy Artifacts'
         if (env.BRANCH_NAME == 'master') {
-            mvn -B release:clean release:prepare release:perform
+            sh 'mvn -B release:clean release:prepare release:perform'
         } else {
-            mvn clean deploy
+            echo '[INFO] Deploy Artifacts skipped as its not master. Use mvn clean deploy to do it manually if needed'
         }
     }
 }
