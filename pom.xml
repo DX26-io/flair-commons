@@ -27,7 +27,6 @@
         <connection>scm:git:https://@github.com/DX26-io/flair-commons.git</connection>
         <url>https://github.com/DX26-io/flair-commons.git</url>
         <developerConnection>scm:git:https://@github.com/DX26-io/flair-commons.git</developerConnection>
-        <tag>HEAD</tag>
     </scm>
 
     <distributionManagement>
