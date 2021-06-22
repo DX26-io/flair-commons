@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Deploy Artifact') {
             steps {
-                echo '[INFO] Deploy Artifact'
+                echo '[INFO] Deploy Artifacts'
             }
         }
     }
