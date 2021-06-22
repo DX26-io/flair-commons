@@ -7,14 +7,15 @@ node {
     }
 
     if (env.BRANCH_NAME == 'master') {
-        environment {
-            GIT_CREDS = credentials('github-creds')
-        }
         stage('Deploy Artifact') {
             echo '[INFO] Checking out master'
             sh 'git checkout -f master'
             echo '[INFO] Deploy Artifacts'
-            sh 'mvn -B release:clean release:prepare release:perform -Dusername=${GIT_CREDS_USR} -Dpassword=${GIT_CREDS_PSW}'
+            withCredentials([usernamePassword(
+                credentialsId: 'github',
+                usernameVariable: 'GIT_CREDS_USR',
+                passwordVariable: 'GIT_CREDS_PSW'
+            )]) { sh 'mvn -B release:clean release:prepare release:perform -Dusername=$GIT_CREDS_USR -Dpassword=$GIT_CREDS_PSW' }
         }
     } else {
         stage('Test and Package') {
