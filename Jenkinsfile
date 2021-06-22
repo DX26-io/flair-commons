@@ -1,6 +1,6 @@
 node {
     stage('Checkout SCM') {
-        checkout scm
+        echo 'Clone SCM'
     }
     stage('Test and Package') {
         steps {
