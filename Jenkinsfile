@@ -14,7 +14,7 @@ node {
             echo '[INFO] Checking out master'
             sh 'git checkout -f master'
             echo '[INFO] Deploy Artifacts'
-            sh 'mvn -B release:clean release:prepare release:perform -Dusername=$GIT_CREDS_USR -Dpassword=$GIT_CREDS_PSW'
+            sh 'mvn -B release:clean release:prepare release:perform -Dusername=${GIT_CREDS_USR} -Dpassword=${GIT_CREDS_PSW}'
         }
     } else {
         stage('Test and Package') {
